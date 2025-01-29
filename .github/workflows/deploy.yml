@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest  # Use GitHub-hosted runner (or self-hosted)
+    runs-on: self-hosted  # Use GitHub-hosted runner (or self-hosted)
 
     env:
       IMAGE_NAME: my-app  # Docker image name
