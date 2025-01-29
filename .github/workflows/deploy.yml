@@ -11,7 +11,7 @@ jobs:
 
     env:
       IMAGE_NAME: my-app  # Docker image name
-      DOCKER_PORT: 8080       # Port exposed inside the container
+      DOCKER_PORT: 5000      # Port exposed inside the container
 
     steps:
       # Step 1: Checkout the repository code
@@ -44,4 +44,4 @@ jobs:
         run: |
           docker stop $IMAGE_NAME || true
           docker rm $IMAGE_NAME || true
-          docker run -d --name $IMAGE_NAME -p 80:$DOCKER_PORT $IMAGE_NAME:latest
+          docker run -d --name $IMAGE_NAME -p 80:5000 $IMAGE_NAME:latest
